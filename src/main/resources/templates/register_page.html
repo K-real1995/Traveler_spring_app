@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans&family=Ubuntu:wght@400;700&display=swap"
+            rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Форма регистрации</title>
+</head>
+
+<body>
+
+<section id="mail" class="mail">
+    <div class="container">
+        <h2 class='section-title'>Форма заказа билета</h2>
+        <form method="post" action="/register" th:object="${registerRequest}" class="form">
+            <input type="text" name="name" class="input" placeholder="Имя" required>
+            <input type="email" name="email" class="input" placeholder="E-mail" required>
+            <input type="tel" name="phone" class="input" placeholder="Телефон" required>
+            <input type="text" name="place" class="input" placeholder="Куда я полечу в ближайшее время?" required>
+            <button type="submit" class="btn btn-form">Двигаться к мечте!</button>
+        </form>
+    </div>
+</section>
+<footer id="footer" class="footer">
+    <div class="container">
+        <p class="credits">© Все мои мечты защищены моим трудолюбием</p>
+    </div>
+</footer>
+</body>
+
+</html>
